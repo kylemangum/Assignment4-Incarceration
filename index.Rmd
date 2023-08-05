@@ -1,0 +1,110 @@
+---
+title: "A3: Incarceration"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+### Introduction
+
+I chose to focus on the 'us-prison-pop.csv' for this assignment. Within
+this, I wanted to focus on Washington State because that's where I am
+from! I then weeded that down to only the most populated counties in
+Washington State. The variables that I chose to work with included
+female prison population, black population and black prison population.
+I chose these variables as I believed I would find more relevant data
+within marginalized groups.
+
+### Summary Information
+
+After sorting through data, I chose to find some averages to set the
+tone for the research. Again, I focused on Washington State, and thus
+chose to find averages among counties. The average population among
+counties in 2016 was 426,861 people and the average prison population
+was 994. Meaning, about 0.233% of all people in those counties were
+incarcerated. As for women between 15-64 only, the average population
+among Washington counties was 142,068. Their average population in
+prison was 76, meaning 0.0535% women in those counties were
+incarcerated. With 142,068/426,861 = 33.282% of the average population
+but 76/994 = 7.646% of the average prison population, I am not
+surprised. Anyone giving a quick look over the data could see that men
+are incarcerated at much higher rates. Although women are a marginalized
+group, it doesn't seem to apply to prison. I next chose to find the
+highest and lowest values for female and black prison populations. I
+found that the highest black population in prison occurred in King
+County in 2002 and was 1,845. Out of 73,480, this means that 2.511% of
+were incarcerated that year, much higher than the 2016 average of
+0.233%. The highest female prison population occurred in Pierce County
+in 2009 and was 297. Out of 272,547, this means that 0.109% were
+incarcerated that year, double the average in 2016 of 0.0535%. The
+lowest for both variables occurred simultaneously in Adams County in
+1993 and was 0 for both. This year, Adams County only contained 14 total
+inmates, thus it was an odd year. There must have been an event that
+occurred that year that caused such a low prison population.
+
+Average Total Population: 426860.5 Average Total Prison Population:
+994.3636 Average Female Prison Population: 75.81818 Average Female
+Population (15-64): 142068.1
+
+Highest Black Prison Pop: 1845, King County 2002 Highest Female Prison
+Pop: 297, Pierce County 2009 Lowest Black Prison Pop: 0, Adams County
+1993 (14 total in prison) Lowest Female Prison Pop: 0, Adams County 1993
+(14 total in prison)
+
+### The Dataset
+
+-Vera Institute collected the data -Vera uses the Incarceration Trends
+data tool which uses data from the Bureau of Justice Statistics, Census
+of Jails and Annual Survey of Jails. -The data was collected to confront
+discrimination and disparities in the prison system as well as promote
+the growth of it. -There are 153,811 rows ('us-prison-pop.csv'). -There
+are 36 ('us-prison-pop.csv'). -You must ask yourself if there are any
+disparities in the groups in and not in the prison population, as well
+as who has the power to create these situations and actually place
+citizens in prison? Lastly, how much missing data is there from
+marginalized groups that were failed to be reported?
+
+What are possible limitations or problems with this data? (at least 200
+words)
+
+-Immediately after loading the data into R, it is evident that there is
+a lot of missing values replaced by NA that need to be filtered out
+before finding any trends or coming to any conclusions. This was the
+first thing I did before proceeding to embark on this assignment. Also
+the data that I worked with in 'us-prison-pop.csv' was only updated to
+2016, meaning there is 7 years of missing data. This last 7 years has
+been monumental in the push and pull of racial tension and the pursuit
+of equity. I believe that there could be an upward trend in the growth
+of the prison system since 2016. Another limitation could be how the
+data was collected. It was compiled from 3 official sources, but still
+mass data like this can be very difficult to collect and organize
+accurately. I would wager that there are definite errors in the numbers
+I worked with, however this is the case for just about any data set one
+may work with. I also noticed that when finding total populations for
+each group of people, they only accounted for the ages between 15 and
+64. Under 15 may be mostly irrelevant, but there are definitely
+prisoners and members of the population who are liable to go to jail,
+all over 64.
+
+### Trends Over Time Chart
+
+For my trends over time chart, I included female prison populations and
+how they developed over time in the largest four counties in Washington
+State. I wanted to find if the marginalization of women had any hand in
+the prison system. At no time did the number of inmates pass 300 and the
+amounts seemed to sporadically jump up and down for all four locations:
+King, Spokane, Pierce, and Snohomish. I ended up finding out that women
+are incarcerated far less than men and there did not seem to be any
+trend that suggested unfair imprisonment.
+
+\`\`\``{r, echo = FALSE, code = readLines("trend_chart.R")}`
+
+### Variable Comparison Chart
+
+For my variable comparison chart I chose to evaluate the relationship between the black population of King County and its black population in prison. I wanted to find out if and slightly expected there to be a definite relation between the two and maybe even a steeper slope on the line representing the prisoners. However, I found that as the black population rapidly grew from 1990 to 2016, the population in prison stayed very steady. It seems that although the two variables are very much related, the population in prison does not seem to be affected much by the total population.
+
+### Map
+
+For my map, I chose to represent the black prison population geographically. I used a color scale to show the density of black inmates for each state. I found that incarceration rates rise in coastal states and fall around the middle of the United States. I also found the most inmates to be in the Illinois/Detroit area. I was expecting more variation, however there is not much as the rates for incarceration are fairly similar among states, especially coastal states.
+
