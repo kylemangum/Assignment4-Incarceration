@@ -1,10 +1,17 @@
 ---
-title: "A3: Incarceration"
+title: "My Report"
 output: html_document
 editor_options: 
   markdown: 
     wrap: 72
 ---
+
+```{r setup, include=FALSE}
+source("compare_chart.R")
+source("trend_chart.R")
+source("map.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ### Introduction
 
@@ -89,6 +96,10 @@ all over 64.
 
 ### Trends Over Time Chart
 
+```{r, echo=FALSE}
+female_prison_graph
+```
+
 For my trends over time chart, I included female prison populations and
 how they developed over time in the largest four counties in Washington
 State. I wanted to find if the marginalization of women had any hand in
@@ -98,13 +109,20 @@ King, Spokane, Pierce, and Snohomish. I ended up finding out that women
 are incarcerated far less than men and there did not seem to be any
 trend that suggested unfair imprisonment.
 
-\`\`\``{r, echo = FALSE, code = readLines("trend_chart.R")}`
 
 ### Variable Comparison Chart
+
+```{r, echo=FALSE}
+king_county_line_graph
+```
 
 For my variable comparison chart I chose to evaluate the relationship between the black population of King County and its black population in prison. I wanted to find out if and slightly expected there to be a definite relation between the two and maybe even a steeper slope on the line representing the prisoners. However, I found that as the black population rapidly grew from 1990 to 2016, the population in prison stayed very steady. It seems that although the two variables are very much related, the population in prison does not seem to be affected much by the total population.
 
 ### Map
+
+```{r, echo=FALSE}
+map
+```
 
 For my map, I chose to represent the black prison population geographically. I used a color scale to show the density of black inmates for each state. I found that incarceration rates rise in coastal states and fall around the middle of the United States. I also found the most inmates to be in the Illinois/Detroit area. I was expecting more variation, however there is not much as the rates for incarceration are fairly similar among states, especially coastal states.
 
